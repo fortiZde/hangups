@@ -27,7 +27,7 @@ CHAT_INIT_PARAMS = {
     'pvt': None,  # Populated later
 }
 CHAT_INIT_REGEX = re.compile(
-    r"(?:<script>AF_initDataCallback\((.*?)\);</script>)", re.DOTALL
+    r"(?:<script nonce=\"[a-zA-Z0-9_+/]*\">AF_initDataCallback\((.*?)\);</script>)", re.DOTALL
 )
 # Timeout to send for setactiveclient requests:
 ACTIVE_TIMEOUT_SECS = 120
